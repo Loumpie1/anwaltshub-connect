@@ -1,3 +1,4 @@
+
 import { FC } from "react";
 import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 
@@ -32,19 +33,20 @@ const Index: FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section with background image */}
-      <section className="relative min-h-[85vh] flex items-center justify-center bg-white border-b">
+      <section className="relative min-h-[85vh] flex items-center justify-center bg-white border-b overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105 animate-[kenburns_20s_ease-in-out_infinite_alternate]"
             style={{ 
               backgroundImage: 'url("/lovable-uploads/b4951fb9-07a3-43c3-b624-c0f60af2ee14.png")',
+              willChange: 'transform',
             }}
           >
-            <div className="absolute inset-0 bg-black/50" /> {/* Dunklerer Overlay für bessere Lesbarkeit */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40 transition-opacity duration-500" />
           </div>
         </div>
         <div className="container mx-auto px-6 py-24 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto animate-fade-in">
             <h1 className="text-6xl font-light text-white mb-8 leading-tight">
               Rechtliche Expertise auf höchstem Niveau
             </h1>
