@@ -37,10 +37,10 @@ const Index: FC = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ 
-              backgroundImage: 'url("/hero-bg.jpg")',
+              backgroundImage: 'url("/lovable-uploads/b4951fb9-07a3-43c3-b624-c0f60af2ee14.png")',
             }}
           >
-            <div className="absolute inset-0 bg-black/40" /> {/* Overlay für bessere Lesbarkeit */}
+            <div className="absolute inset-0 bg-black/50" /> {/* Dunklerer Overlay für bessere Lesbarkeit */}
           </div>
         </div>
         <div className="container mx-auto px-6 py-24 relative z-10">
@@ -55,7 +55,7 @@ const Index: FC = () => {
         </div>
       </section>
 
-      {/* Lawyers Section - Large images with overlay */}
+      {/* Lawyers Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -98,7 +98,7 @@ const Index: FC = () => {
         </div>
       </section>
 
-      {/* Contact Section - Minimalist style */}
+      {/* Contact Section */}
       <section className="py-24 bg-white border-t">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
