@@ -1,4 +1,3 @@
-
 import { FC } from "react";
 import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 
@@ -32,14 +31,24 @@ const lawyerProfiles = [
 const Index: FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Kirkland style */}
+      {/* Hero Section with background image */}
       <section className="relative min-h-[85vh] flex items-center justify-center bg-white border-b">
-        <div className="container mx-auto px-6 py-24">
+        <div className="absolute inset-0 w-full h-full">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ 
+              backgroundImage: 'url("/hero-bg.jpg")',
+            }}
+          >
+            <div className="absolute inset-0 bg-black/40" /> {/* Overlay für bessere Lesbarkeit */}
+          </div>
+        </div>
+        <div className="container mx-auto px-6 py-24 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <h1 className="text-6xl font-light text-law-dark mb-8 leading-tight">
+            <h1 className="text-6xl font-light text-white mb-8 leading-tight">
               Rechtliche Expertise auf höchstem Niveau
             </h1>
-            <p className="text-xl text-law-gray font-light leading-relaxed max-w-3xl">
+            <p className="text-xl text-white/90 font-light leading-relaxed max-w-3xl">
               Unsere Kanzlei verbindet jahrelange Erfahrung mit innovativen Lösungsansätzen für Ihre rechtlichen Herausforderungen.
             </p>
           </div>
