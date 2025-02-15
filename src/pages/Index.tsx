@@ -7,24 +7,24 @@ const lawyerProfiles = [
     id: 1,
     name: "Dr. Thomas Weber",
     specialization: "Wirtschaftsrecht",
-    description: "Spezialist für Unternehmensrecht und M&A Transaktionen",
-    image: "photo-1581092795360-fd1ca04f0952",
+    description: "Spezialist für Unternehmensrecht und M&A Transaktionen mit über 15 Jahren Erfahrung in der Beratung von nationalen und internationalen Unternehmen.",
+    image: "/lawyer1.jpg", // We'll need this image
     link: "/weber",
   },
   {
     id: 2,
     name: "Dr. Sarah Mueller",
     specialization: "Arbeitsrecht",
-    description: "Expertin für Arbeitsrecht und Vertragsgestaltung",
-    image: "photo-1581091226825-a6a2a5aee158",
+    description: "Expertin für Arbeitsrecht und Vertragsgestaltung. Begleitet Unternehmen bei Restrukturierungen und komplexen arbeitsrechtlichen Fragestellungen.",
+    image: "/lawyer2.jpg", // We'll need this image
     link: "/mueller",
   },
   {
     id: 3,
     name: "Dr. Michael Schmidt",
     specialization: "Immobilienrecht",
-    description: "Fokus auf Immobilienrecht und Baurecht",
-    image: "photo-1486312338219-ce68d2c6f44d",
+    description: "Fokus auf Immobilienrecht und Baurecht. Berät bei Immobilientransaktionen und vertritt Mandanten in baurechtlichen Streitigkeiten.",
+    image: "/lawyer3.jpg", // We'll need this image
     link: "/schmidt",
   },
 ];
@@ -32,86 +32,82 @@ const lawyerProfiles = [
 const Index: FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center bg-law-light">
-        <div className="container mx-auto px-6 animate-fade-in">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-semibold text-law-dark mb-6">
-              Ihre Experten für Rechtsfragen
+      {/* Hero Section - Kirkland style */}
+      <section className="relative min-h-[85vh] flex items-center justify-center bg-white border-b">
+        <div className="container mx-auto px-6 py-24">
+          <div className="max-w-5xl mx-auto">
+            <h1 className="text-6xl font-light text-law-dark mb-8 leading-tight">
+              Rechtliche Expertise auf höchstem Niveau
             </h1>
-            <p className="text-xl text-law-gray mb-8">
-              Kompetente rechtliche Beratung durch erfahrene Fachanwälte
+            <p className="text-xl text-law-gray font-light leading-relaxed max-w-3xl">
+              Unsere Kanzlei verbindet jahrelange Erfahrung mit innovativen Lösungsansätzen für Ihre rechtlichen Herausforderungen.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Lawyers Section */}
+      {/* Lawyers Section - Large images with overlay */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="section-title">Unsere Anwälte</h2>
-            <p className="section-subtitle">Experten in ihrem Fachgebiet</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {lawyerProfiles.map((lawyer, index) => (
               <div
                 key={lawyer.id}
-                className="lawyer-card group"
+                className="group relative"
                 style={{
                   animationDelay: `${index * 0.2}s`,
                 }}
               >
-                <div className="aspect-w-3 aspect-h-2 mb-6">
+                <div className="aspect-[3/4] overflow-hidden mb-6">
                   <img
-                    src={`https://source.unsplash.com/${lawyer.image}`}
+                    src={lawyer.image}
                     alt={lawyer.name}
-                    className="object-cover rounded-lg"
-                    loading="lazy"
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-law-dark mb-2">
-                  {lawyer.name}
-                </h3>
-                <p className="text-sm font-medium text-law-gray mb-2">
-                  {lawyer.specialization}
-                </p>
-                <p className="text-law-gray mb-4">{lawyer.description}</p>
-                <a
-                  href={lawyer.link}
-                  className="inline-flex items-center text-law-accent hover:text-law-dark transition-colors duration-300"
-                >
-                  Mehr erfahren
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
+                <div className="space-y-3">
+                  <h3 className="text-2xl font-light text-law-dark">
+                    {lawyer.name}
+                  </h3>
+                  <p className="text-lg font-light text-law-gray">
+                    {lawyer.specialization}
+                  </p>
+                  <p className="text-law-gray font-light leading-relaxed">
+                    {lawyer.description}
+                  </p>
+                  <a
+                    href={lawyer.link}
+                    className="inline-flex items-center text-law-dark hover:text-law-accent transition-colors duration-300 mt-4 text-lg"
+                  >
+                    Profil ansehen
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-24 bg-law-light">
+      {/* Contact Section - Minimalist style */}
+      <section className="py-24 bg-white border-t">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="section-title">Kontakt</h2>
-            <p className="section-subtitle">Vereinbaren Sie einen Termin</p>
-          </div>
-          
-          <div className="max-w-2xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center text-center p-6">
-                <Phone className="h-8 w-8 text-law-accent mb-4" />
-                <p className="text-law-gray">+49 (0) 123 456789</p>
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-light text-law-dark mb-12">Kontakt</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              <div className="space-y-4">
+                <Phone className="h-6 w-6 text-law-dark" />
+                <p className="text-lg font-light text-law-dark">+49 (0) 123 456789</p>
               </div>
-              <div className="flex flex-col items-center text-center p-6">
-                <Mail className="h-8 w-8 text-law-accent mb-4" />
-                <p className="text-law-gray">kontakt@kanzlei.de</p>
+              <div className="space-y-4">
+                <Mail className="h-6 w-6 text-law-dark" />
+                <p className="text-lg font-light text-law-dark">kontakt@kanzlei.de</p>
               </div>
-              <div className="flex flex-col items-center text-center p-6">
-                <MapPin className="h-8 w-8 text-law-accent mb-4" />
-                <p className="text-law-gray">Musterstraße 123<br />10115 Berlin</p>
+              <div className="space-y-4">
+                <MapPin className="h-6 w-6 text-law-dark" />
+                <p className="text-lg font-light text-law-dark">
+                  Musterstraße 123<br />10115 Berlin
+                </p>
               </div>
             </div>
           </div>
