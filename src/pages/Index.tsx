@@ -8,7 +8,7 @@ const lawyerProfiles = [
     name: "Dr. Thomas Weber",
     specialization: "Wirtschaftsrecht",
     description: "Spezialist für Unternehmensrecht und M&A Transaktionen mit über 15 Jahren Erfahrung in der Beratung von nationalen und internationalen Unternehmen.",
-    image: "/lawyer1.jpg", // We'll need this image
+    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80", 
     link: "/weber",
   },
   {
@@ -16,7 +16,7 @@ const lawyerProfiles = [
     name: "Dr. Sarah Mueller",
     specialization: "Arbeitsrecht",
     description: "Expertin für Arbeitsrecht und Vertragsgestaltung. Begleitet Unternehmen bei Restrukturierungen und komplexen arbeitsrechtlichen Fragestellungen.",
-    image: "/lawyer2.jpg", // We'll need this image
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80", 
     link: "/mueller",
   },
   {
@@ -24,7 +24,7 @@ const lawyerProfiles = [
     name: "Dr. Michael Schmidt",
     specialization: "Immobilienrecht",
     description: "Fokus auf Immobilienrecht und Baurecht. Berät bei Immobilientransaktionen und vertritt Mandanten in baurechtlichen Streitigkeiten.",
-    image: "/lawyer3.jpg", // We'll need this image
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80", 
     link: "/schmidt",
   },
 ];
